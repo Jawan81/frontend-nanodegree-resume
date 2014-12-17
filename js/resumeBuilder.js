@@ -41,10 +41,8 @@ var projects = {
 	]
 }
 
-var skills = ["PHP", "JS", "HTML"];
-//skills = [];
 var bio = {
-	"name": "Jakob Simon Friedemann Wanner",
+	"name": "Jakob Wanner",
 	"role": "Software Engineer",
 	"contacts": {
 		"mobile": "012347",
@@ -54,7 +52,7 @@ var bio = {
 	},
 	"bioPic": "images/fry.jpg",
 	"welcome": "Hi there!",
-	"skills": skills
+	"skills": ["PHP", "JS", "HTML"]
 }
 
 var education = {
@@ -185,4 +183,3 @@ education.display = function() {
 education.display();
 
 $("#mapDiv").append(googleMap);
-
