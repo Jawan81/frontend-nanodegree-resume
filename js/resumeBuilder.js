@@ -98,8 +98,8 @@ var education = {
 //  DISPLAY FUNCTIONS
 // *******************
 
+// Displays the biography section
 bio.display = function() {
-
 	var formattedName = HTMLheaderName.replace("%data%", this.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", this.role);
 
@@ -125,6 +125,7 @@ bio.display = function() {
 	}
 }
 
+// Displays the work experience section
 work.display = function() {
 	for (i in this.jobs) {
 		var job = this.jobs[i];
@@ -139,6 +140,7 @@ work.display = function() {
 	}
 }
 
+// Displays the projects section
 projects.display = function() {
 	for (var projectId in this.projects) {
 		var project = this.projects[projectId];
@@ -154,6 +156,7 @@ projects.display = function() {
 	}
 }
 
+// Displays the education section
 education.display = function() {
 	this.schools.forEach(function(school) {
 		$("#education").append(HTMLschoolStart);
@@ -180,18 +183,21 @@ education.display = function() {
 	});
 }
 
+// Displays the Google map
+function showMap() {
+	$("#mapDiv").append(googleMap);
+}
+
 // *******************
 // FUNCTION EXECUTION
 // *******************
 
-// Display the data
+// Display the resume
 bio.display();
 work.display();
 projects.display();
 education.display();
-
-// show Google Map
-$("#mapDiv").append(googleMap);
+showMap();
 
 
 // *******************
@@ -201,7 +207,7 @@ $("#mapDiv").append(googleMap);
 // Don't use the internationalization button in the final version
 // $("#main").append(internationalizeButton);
 
-// This function has no effect as the internationalization button was commented
+// This function has no effect as the internationalization button was commented out
 // but leave it here for documentation purposes
 function inName(name) {
 	var splitted = name.split(' ');
