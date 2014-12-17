@@ -213,3 +213,7 @@ span {
     display: block;
   }
 }
+
+#skills {
+  flex-direction: column;
+}
