@@ -1,7 +1,8 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif;*/
+  font-family: 'Poiret One', cursive;
 }
 
 .clearfix {
@@ -114,9 +115,9 @@ a {
   background-color: #4A4A4A;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+.red {
+  background-color: #993737;
+  padding-top: 10px;
 }
 
 .flex-box {
@@ -216,4 +217,16 @@ span {
 
 #skills {
   flex-direction: column;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.navbar-default {
+  background-color: black;/*#484848;*/
+}
+
+.yellowFont {
+  color: #F5A623
 }
