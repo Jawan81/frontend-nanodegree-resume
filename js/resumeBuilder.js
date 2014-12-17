@@ -109,11 +109,9 @@ if (bio.skills.length > 0) {
 	});
 }
 
-displayWork();
-
-function displayWork() {
-	for (i in work.jobs) {
-		var job = work.jobs[i];
+work.display = function() {
+	for (i in this.jobs) {
+		var job = this.jobs[i];
 		$("#workExperience").append(HTMLworkStart);
 		var employer = HTMLworkEmployer.replace("%data%", job.employer);
 		var title = HTMLworkTitle.replace("%data%", job.title);
@@ -124,6 +122,8 @@ function displayWork() {
 		$(".work-entry:last").append(HTMLworkDescription.replace("%data%", job.description));
 	}
 }
+
+work.display();
 
 $("#main").append(internationalizeButton);
 
